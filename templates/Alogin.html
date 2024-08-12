@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/istyle.css" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form action="{{url_for('Alogin')}}" method="post">
+        <div class="txt_field">
+          <input type="text" id="username" name="name" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" name="password"required>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member?<a href="{{url_for('Auserregister')}}">Sign up</a>
+        </div>
+        <h1>{{message}}</h1>
+      </form>
+    </div>
+   </body>
+</html>
